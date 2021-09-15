@@ -8,7 +8,7 @@ public class Main {
 				+ " because they keep putting themselves "
 				+ "deliberately into paranoid avoidable situations";
 		String arr[] = str.split(" ");
-		LinkedHashMap<String,Integer> hashMap = new LinkedHashMap<>();
+		HashMap<String,Integer> hashMap = new HashMap<>();
 		for(String string: arr) {
 		
 			Integer value = hashMap.get(string);
@@ -21,8 +21,11 @@ public class Main {
 			hashMap.add(string, value);
 		}
 	 System.out.println(hashMap);
-	 int frequency = hashMap.get("paranoid");
+	 int frequency = hashMap.get("Paranoids");
 	 System.out.println(frequency);
+	 hashMap.deleteWord("avoidable",1);
+	 System.out.println(hashMap);
+	 
 	}
 
 }
