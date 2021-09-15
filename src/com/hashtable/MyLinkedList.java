@@ -173,4 +173,10 @@ public class MyLinkedList<K> {
 	{
 		return "My nodes: " + head;
 	}
+
+	@Override
+	public String toString() {
+		return "MyLinkedList [head=" + head + ", tail=" + tail + "]";
+	}
+	
 }
