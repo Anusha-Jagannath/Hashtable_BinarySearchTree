@@ -3,24 +3,40 @@ package com.hashtable;
 public class MyNode<K,V> implements INode<K> {
 
 	private K key;
-	private V value;
+	private INode<K> next;
+	
+	public MyNode(K key) {
+		super();
+		this.key = key;
+		this.next = null;
+	}
+
 	@Override
 	public K getKey() {
-		return null;
+		return key;
 	}
+
 	@Override
 	public void setKey(K key) {
-		
+		this.key = key;
 	}
+
 	@Override
 	public INode<K> getNext() {
-		return null;
+		return next;
 	}
+
 	@Override
 	public void setNext(INode<K> next) {
-		
+		this.next = next;
 	}
 	
-	
-
+	@Override
+	public String toString() {
+		StringBuilder myNodeString = new StringBuilder();
+		myNodeString.append("MyNode{" +"key= ").append(key).append('}');
+		if(next != null)
+			myNodeString.append("->").append(next);
+		return myNodeString.toString();
+	}
 }
