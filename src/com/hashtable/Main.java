@@ -3,9 +3,12 @@ package com.hashtable;
 public class Main {
 
 	public static void main(String[] args) {
-		String str = "To be or not to be";
+		String str = "Paranoids are not paranoid"
+				+ " because they are paranoid but"
+				+ " because they keep putting themselves "
+				+ "deliberately into paranoid avoidable situations";
 		String arr[] = str.split(" ");
-		HashMap<String,Integer> hashMap = new HashMap<>();
+		LinkedHashMap<String,Integer> hashMap = new LinkedHashMap<>();
 		for(String string: arr) {
 		
 			Integer value = hashMap.get(string);
@@ -18,6 +21,8 @@ public class Main {
 			hashMap.add(string, value);
 		}
 	 System.out.println(hashMap);
+	 int frequency = hashMap.get("paranoid");
+	 System.out.println(frequency);
 	}
 
 }
